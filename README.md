@@ -57,12 +57,12 @@ Add `hubot-lambda` to `external-scripts.json`.
 Usage
 -----
 
-- `hubot lambda <functionName> <arg1>`
+- `hubot lambda <functionName> <arg1>:<value> <arg2>:<value>`
 
 Example
 -----
 
-- `hubot lambda helloWorld Yo`
+- `hubot lambda helloWorld message:Yo`
 
 
 
