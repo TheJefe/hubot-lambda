@@ -12,6 +12,7 @@
 region = process.env.HUBOT_LAMBDA_REGION ? "us-east-1"
 accessKeyId = process.env.HUBOT_LAMBDA_AWS_ACCESS_KEY_ID
 secretAccessKey = process.env.HUBOT_LAMBDA_AWS_SECRET_ACCESS_KEY
+productionQualifier = process.env.HUBOT_LAMBDA_PRODUCTION_QUALIFIER ? "prod"
 
 AWS = require("aws-sdk")
 lambda = new AWS.Lambda(
@@ -41,6 +42,7 @@ module.exports = (robot) ->
       InvocationType: 'RequestResponse'
       LogType: 'None'
       Payload: payload
+      Qualifier: productionQualifier
 
     lambda.invoke(
       params

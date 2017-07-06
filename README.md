@@ -37,6 +37,16 @@ Add `hubot-lambda` to `external-scripts.json`.
 > export HUBOT_LAMBDA_AWS_SECRET_ACCESS_KEY="XXXX"
 ```
 
+##### Optional ENV Variables
+
+`HUBOT_LAMBDA_PRODUCTION_QUALIFIER` is set to "prod" if not specified. This
+refers to an alias for the lambda function to allow for control of what version
+should be used in production. See [AWS Lambda Function Versioning and Aliases](http://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html)
+
+```
+> export HUBOT_LAMBDA_PRODUCTION_QUALIFIER="XXXX"
+```
+
 ##### Required AWS User Policy
 ```
 {
